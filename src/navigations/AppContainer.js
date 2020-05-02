@@ -18,6 +18,7 @@ import Stock from "../overlays/Stock";
 import Settings from "../screens/Settings";
 import Contacts from "../screens/Contacts";
 import AccountDetails from "../screens/AccountDetails";
+import Login from "../screens/Login";
 
 const ExpenseStack = createStackNavigator({
   TopCategories: {
@@ -199,7 +200,7 @@ const AuthStack = createStackNavigator({
     },
   },
   SignIn: {
-    screen: Example,
+    screen: Login,
     navigationOptions: {
       headerTitle: "Sign In",
     },
