@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     justifyContent: "space-around",
+    backgroundColor: "#FFFF",
   },
   container: {
     // flex: 1,
