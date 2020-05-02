@@ -15,6 +15,9 @@ import SideBar from "../components/SideBar";
 import LinkNewAccount from "../overlays/LinkNewAccount";
 import AllStocks from "../overlays/AllStocks";
 import Stock from "../overlays/Stock";
+import Settings from "../screens/Settings";
+import Contacts from "../screens/Contacts";
+import AccountDetails from "../screens/AccountDetails";
 
 const ExpenseStack = createStackNavigator({
   TopCategories: {
@@ -224,9 +227,24 @@ const AuthStack = createStackNavigator({
 const MainDrawer = createDrawerNavigator(
   {
     Home: TabNavigator,
-    Expense: ExpenseStack,
-    Portfolio: PortfolioStack,
-    Accounts: AccountStack,
+    AccountDetails: {
+      screen: AccountDetails,
+      navigationOptions: () => ({
+        title: "Account Details",
+      }),
+    },
+    Settings: {
+      screen: Settings,
+      navigationOptions: () => ({
+        title: "Settings",
+      }),
+    },
+    Contact: {
+      screen: Contacts,
+      navigationOptions: () => ({
+        title: "Contact Us",
+      }),
+    },
   },
   {
     contentComponent: (props) => <SideBar {...props} />,
