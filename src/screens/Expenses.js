@@ -8,6 +8,7 @@ import {
   SafeAreaView,
   FlatList,
   ScrollView,
+  StatusBar,
 } from "react-native";
 import ExpensePieChart from "../components/ExpensePieChart";
 import Card from "../components/Card";
@@ -106,6 +107,7 @@ function Item({ data }) {
 const Expenses = (props) => {
   return (
     <ScrollView style={{ flex: 1 }}>
+      <StatusBar backgroundColor="#1261A0" barStyle="light-content" />
       <View>
         <ExpensePieChart />
         <View style={styles.cardList}>

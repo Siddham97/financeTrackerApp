@@ -17,7 +17,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 import Feather from "react-native-vector-icons/Feather";
 
-const SignInScreen = ({ navigation }) => {
+const Signup = ({ navigation }) => {
   const [data, setData] = React.useState({
     username: "",
     password: "",
@@ -73,7 +73,7 @@ const SignInScreen = ({ navigation }) => {
 
   return (
     <View style={styles.container}>
-      <StatusBar backgroundColor="#009387" barStyle="light-content" />
+      <StatusBar backgroundColor="#1261A0" barStyle="light-content" />
       <View style={styles.header}>
         <Text style={styles.text_header}>Register Now!</Text>
       </View>
@@ -167,7 +167,7 @@ const SignInScreen = ({ navigation }) => {
           <View style={styles.button}>
             <TouchableOpacity style={styles.signIn} onPress={() => {}}>
               <LinearGradient
-                colors={["#08d4c4", "#01ab9d"]}
+                colors={["#1779c8", "#1261A0"]}
                 style={styles.signIn}
               >
                 <Text
@@ -188,7 +188,7 @@ const SignInScreen = ({ navigation }) => {
               style={[
                 styles.signIn,
                 {
-                  borderColor: "#009387",
+                  borderColor: "#1779c8",
                   borderWidth: 1,
                   marginTop: 15,
                 },
@@ -198,7 +198,7 @@ const SignInScreen = ({ navigation }) => {
                 style={[
                   styles.textSign,
                   {
-                    color: "#009387",
+                    color: "#1779c8",
                   },
                 ]}
               >
@@ -212,12 +212,12 @@ const SignInScreen = ({ navigation }) => {
   );
 };
 
-export default SignInScreen;
+export default Signup;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#009387",
+    backgroundColor: "#1261A0",
   },
   header: {
     flex: 1,
@@ -269,6 +269,7 @@ const styles = StyleSheet.create({
   textSign: {
     fontSize: 18,
     fontWeight: "bold",
+    width: 100,
   },
   textPrivate: {
     flexDirection: "row",

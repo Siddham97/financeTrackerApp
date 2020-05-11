@@ -13,6 +13,7 @@ import {
   createStackNavigator,
   NavigationActions,
 } from "react-navigation-stack";
+import { AuthContext } from "./context";
 
 const image = { uri: "https://reactjs.org/logo-og.png" };
 
@@ -24,6 +25,8 @@ const navigateToScreen = (route) => () => {
 };
 
 const SideBar = (props) => {
+  const { signOut } = React.useContext(AuthContext);
+
   return (
     <ScrollView>
       {/* <ImageBackground
@@ -48,15 +51,11 @@ const SideBar = (props) => {
         // activeOpacity={0.5}
         style={styles.SubmitButtonStyle}
         onPress={() => {
-          ButtonClickCheckFunction;
+          signOut();
+          // ButtonClickCheckFunction;
         }}
       >
-        <Text
-          style={styles.TextStyle}
-          onPress={() => {
-            props.navigation.navigate("NewAccount");
-          }}
-        >
+        <Text style={styles.TextStyle} onPress={() => {}}>
           Logout
         </Text>
       </TouchableOpacity>

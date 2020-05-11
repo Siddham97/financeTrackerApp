@@ -21,6 +21,23 @@ import AccountDetails from "../screens/AccountDetails";
 import Login from "../screens/Login";
 import Signup from "../screens/Signup";
 
+const HomeStack = createStackNavigator({
+  Home: {
+    screen: Home,
+    navigationOptions: {
+      title: "Home",
+      headerStyle: {
+        backgroundColor: "#1261A0",
+      },
+      headerTintColor: "#fff",
+      headerTitleStyle: {
+        fontWeight: "bold",
+        fontSize: 18,
+      },
+    },
+  },
+});
+
 const ExpenseStack = createStackNavigator({
   TopCategories: {
     screen: Expenses,
@@ -129,7 +146,7 @@ const PortfolioStack = createStackNavigator({
 const TabNavigator = createMaterialBottomTabNavigator(
   {
     Home: {
-      screen: Home,
+      screen: HomeStack,
       navigationOptions: {
         tabBarLabel: "Home",
         tabBarIcon: ({ tintColor }) => (
@@ -285,4 +302,4 @@ const AppContainer = createSwitchNavigator({
   },
 });
 
-export default createAppContainer(AppContainer);
+export default createAppContainer(MainDrawer);

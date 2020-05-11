@@ -11,6 +11,7 @@ import {
   Button,
   TouchableOpacity,
   Alert,
+  StatusBar,
 } from "react-native";
 import Icon from "react-native-vector-icons/Ionicons";
 // import DATA from "../data/dataArrays";
@@ -84,6 +85,7 @@ export const DATA = [
 function Item({ data }) {
   return (
     <View style={styles.item}>
+      <StatusBar backgroundColor="#1261A0" barStyle="light-content" />
       <View style={{ flexDirection: "row" }}>
         <View style={styles.image}>
           {/* <Icon size={25} name={"ios-images"} /> */}

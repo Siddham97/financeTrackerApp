@@ -9,6 +9,7 @@ import {
   FlatList,
   ScrollView,
   Dimensions,
+  StatusBar,
 } from "react-native";
 import TotalExpenseChart from "../components/TotalExpenseChart";
 import Icon from "react-native-vector-icons/Ionicons";
@@ -99,8 +100,9 @@ function Item({ data }) {
 
 const Home = (props) => {
   return (
-    <View style={{ flex: 1 }}>
-      <Header title="Home" />
+    <View>
+      {/* <Header title="Home" /> */}
+      <StatusBar backgroundColor="#1261A0" barStyle="light-content" />
       <ScrollView>
         <View>
           <TotalExpenseChart />
