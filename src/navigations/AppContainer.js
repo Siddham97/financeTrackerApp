@@ -19,6 +19,7 @@ import Settings from "../screens/Settings";
 import Contacts from "../screens/Contacts";
 import AccountDetails from "../screens/AccountDetails";
 import Login from "../screens/Login";
+import Signup from "../screens/Signup";
 
 const ExpenseStack = createStackNavigator({
   TopCategories: {
@@ -26,7 +27,6 @@ const ExpenseStack = createStackNavigator({
     navigationOptions: {
       title: "Expenses",
       headerStyle: {
-        width: "100%",
         backgroundColor: "#1261A0",
       },
       headerTintColor: "#fff",
@@ -51,7 +51,6 @@ const AccountStack = createStackNavigator(
       navigationOptions: {
         title: "Bank Accounts",
         headerStyle: {
-          width: "100%",
           backgroundColor: "#1261A0",
         },
         headerTintColor: "#fff",
@@ -88,7 +87,6 @@ const PortfolioStack = createStackNavigator({
     navigationOptions: {
       title: "Portfolio",
       headerStyle: {
-        width: "100%",
         backgroundColor: "#1261A0",
       },
       headerTintColor: "#fff",
@@ -103,7 +101,6 @@ const PortfolioStack = createStackNavigator({
     navigationOptions: {
       headerTitle: "Your Stocks",
       headerStyle: {
-        width: "100%",
         backgroundColor: "#1261A0",
       },
       headerTintColor: "#fff",
@@ -118,7 +115,6 @@ const PortfolioStack = createStackNavigator({
     navigationOptions: {
       headerTitle: "",
       headerStyle: {
-        width: "100%",
         backgroundColor: "#1261A0",
       },
       headerTintColor: "#fff",
@@ -205,10 +201,10 @@ const AuthStack = createStackNavigator({
       headerTitle: "Sign In",
     },
   },
-  CreateAccount: {
-    screen: Example,
+  Signup: {
+    screen: Signup,
     navigationOptions: {
-      headerTitle: "Create Account",
+      headerTitle: "Sign up",
     },
   },
   ForgotPassword: {
